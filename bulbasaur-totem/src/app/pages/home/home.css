@@ -27,6 +27,25 @@ h1 {
   justify-content: center;
 }
 
+.btn-comprar {
+  background-color: #ee2532 !important;
+  color: #fff !important;
+}
+
+.btn-vender {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+
+.btn-comprar:hover {
+  background-color: #c91e29 !important;
+}
+
+.btn-vender:hover {
+  background-color: #333 !important;
+}
+
+
 @media (max-width: 600px) {
   h1 {
     font-size: 1.8rem;
@@ -36,11 +55,4 @@ h1 {
     width: 180px;
   }
 
-  .buttons {
-    flex-direction: column;
-  }
-
-  .buttons button {
-    width: 100%;
-  }
 }

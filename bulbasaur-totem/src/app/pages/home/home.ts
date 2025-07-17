@@ -1,13 +1,19 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
-import { MatCardModule } from '@angular/material/card';
+import { RouterLink} from '@angular/router'; 
+
 
 @Component({
   selector: 'app-home',
-  imports: [BrowserAnimationsModule, MatButtonModule, MatCardModule],
+  standalone: true,
+  imports: [
+    CommonModule,
+    MatButtonModule,
+    RouterLink 
+  ],
   templateUrl: './home.html',
-  styleUrl: './home.css'
+  styleUrls: ['./home.css']
 })
 export class Home {
 
