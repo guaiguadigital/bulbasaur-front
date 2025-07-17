@@ -6,6 +6,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatIconModule } from '@angular/material/icon';
 import { Auto, AutoService } from '../../services/auto-service';
 import { ChangeDetectorRef } from '@angular/core';
+import { ChatPopup } from '../../shared/components/chat-popup/chat-popup';
 
 @Component({
   selector: 'app-comprar',
@@ -15,7 +16,8 @@ import { ChangeDetectorRef } from '@angular/core';
     MatButtonModule,
     MatCardModule,
     MatGridListModule,
-    MatIconModule
+    MatIconModule,
+    ChatPopup
   ],
   templateUrl: './comprar.html',
   styleUrls: ['./comprar.css']

@@ -1,0 +1,24 @@
+<!-- shared/components/chat-popup/chat-popup.component.html -->
+@if (isOpen) {
+    <div class="chat-overlay">
+        <div class="chat-box">
+            <div class="chat-header">
+            <h3>Chat</h3>
+            <button (click)="close()">X</button>
+            </div>
+            <div class="chat-messages">
+                @for (msg of messages; track msg) {
+                    <div class="message">{{ msg }}</div>
+                }
+            </div>
+            <input
+            #chatInput
+            type="text"
+            [(ngModel)]="newMessage"
+            (keyup.enter)="sendMessage()"
+            placeholder="Escribe un mensaje..."
+            />
+        </div>
+    </div>
+}
+

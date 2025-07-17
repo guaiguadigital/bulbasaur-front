@@ -1,0 +1,47 @@
+/* shared/components/chat-popup/chat-popup.component.css */
+.chat-overlay {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 300px;
+  max-width: 90%;
+  z-index: 1000;
+}
+
+.chat-box {
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.chat-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background: #ee2532;
+  color: white;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 10px;
+}
+
+.chat-messages .message {
+  margin-bottom: 5px;
+}
+
+input {
+  border: none;
+  border-top: 1px solid #ccc;
+  padding: 10px;
+  font-size: 14px;
+  outline: none;
+}

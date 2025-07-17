@@ -6,6 +6,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { routes } from './app.routes';
 import { provideHttpClient, withFetch } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -17,7 +18,8 @@ export const appConfig: ApplicationConfig = {
     importProvidersFrom(
       BrowserAnimationsModule,
       MatButtonModule,
-      MatCardModule
+      MatCardModule,
+      FormsModule
     )
   ]
 };

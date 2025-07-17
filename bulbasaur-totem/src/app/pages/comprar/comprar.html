@@ -12,7 +12,6 @@
         
         <mat-card-content>
           <div class="car__title">{{ auto.titulo }} ({{ auto.ano }})</div>
-
           <div class="car-info">
             <div class="info-item">
               <mat-icon class="icon-red">palette</mat-icon>
@@ -42,11 +41,14 @@
         </mat-card-content>
 
         <mat-card-actions class="card-actions">
-          <button mat-raised-button class="btn-comprar">
+          <button mat-raised-button class="btn-comprar" (click)="chat.open()">
             Comprar
           </button>
         </mat-card-actions>
       </mat-card>
     }
   </div>
+
+  <!-- Aquí agregas el chat flotante -->
+  <app-chat-popup #chat></app-chat-popup>
 }
