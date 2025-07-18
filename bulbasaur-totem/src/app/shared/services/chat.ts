@@ -2,14 +2,18 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 
-@Injectable({
-  providedIn: 'root'
-})
+export interface ChatMessage {
+  text: string;
+  from: 'bot' | 'user';
+}
+
+@Injectable({ providedIn: 'root' })
+
 export class Chat {
-  private messagesSubject = new BehaviorSubject<string[]>([]);
+  private messagesSubject = new BehaviorSubject<ChatMessage[]>([]);
   messages$ = this.messagesSubject.asObservable();
 
-  addMessage(msg: string) {
+  addMessage(msg: ChatMessage) {
     const current = this.messagesSubject.value;
     this.messagesSubject.next([...current, msg]);
   }

@@ -1,4 +1,3 @@
-/* Grid responsivo de autos */
 .autos-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -6,7 +5,6 @@
   padding: 20px;
 }
 
-/* Card */
 .auto-card {
   display: flex;
   flex-direction: column;
@@ -18,10 +16,9 @@
   background-color: #fff;
 }
 
-/* Imagen uniforme */
 .image-wrapper, .auto-image {
   width: 100%;
-  height: 250px; /* altura uniforme para todas */
+  height: 250px;
   overflow: hidden;
 }
 
@@ -32,12 +29,12 @@
   display: block;
 }
 
-/* Detalles del auto */
+
 .auto-details, .mat-card-content {
   padding: 15px;
 }
 
-/* Info de características */
+
 .car-info {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -56,7 +53,7 @@
   color: #ee2532;
 }
 
-/* Título del auto */
+
 .card__title {
   font-size: 1rem;
   font-weight: 500;
@@ -64,14 +61,14 @@
   margin-bottom: 8px;
 }
 
-/* Card actions - botón alineado a la derecha */
+
 .card-actions {
   display: flex;
   justify-content: flex-end;
   padding: 10px;
 }
 
-/* Botón Comprar rojo */
+
 .btn-comprar {
   background-color: #ee2532 !important;
   color: #fff !important;
@@ -82,7 +79,7 @@
   background-color: #c91e29 !important;
 }
 
-/* Mensaje de error */
+
 .error-message {
   color: red;
   padding: 20px;
