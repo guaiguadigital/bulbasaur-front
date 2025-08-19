@@ -1,0 +1,52 @@
+@if (isLoading) {
+  <p>Cargando autos...</p>
+} @else if (error) {
+  <p>{{ error }}</p>
+} @else {
+  <div class="autos-grid">
+    @for (auto of autos; track auto._id) {
+      <mat-card class="auto-card">
+        <div class="image-wrapper">
+          <img mat-card-image [src]="auto.imagem" alt="{{ auto.titulo }}" />
+        </div>
+        
+        <mat-card-content>
+          <div class="car__title">{{ auto.titulo }} ({{ auto.ano }})</div>
+
+          <div class="car-info">
+            <div class="info-item">
+              <mat-icon class="icon-red">palette</mat-icon>
+              <span>{{ auto.cor }}</span>
+            </div>
+            <div class="info-item">
+              <mat-icon class="icon-red">settings</mat-icon>
+              <span>{{ auto.transmissao }}</span>
+            </div>
+            <div class="info-item">
+              <mat-icon class="icon-red">speed</mat-icon>
+              <span>{{ auto.quilometragem }}</span>
+            </div>
+            <div class="info-item">
+              <mat-icon class="icon-red">local_gas_station</mat-icon>
+              <span>{{ auto.combustivel }}</span>
+            </div>
+            <div class="info-item">
+              <mat-icon class="icon-red">door_front</mat-icon>
+              <span>{{ auto.portas }}</span>
+            </div>
+            <div class="info-item">
+              <mat-icon class="icon-red">attach_money</mat-icon>
+              <span>{{ auto.preco_venda }}</span>
+            </div>
+          </div>
+        </mat-card-content>
+
+        <mat-card-actions class="card-actions">
+          <button mat-raised-button class="btn-comprar">
+            Comprar
+          </button>
+        </mat-card-actions>
+      </mat-card>
+    }
+  </div>
+}

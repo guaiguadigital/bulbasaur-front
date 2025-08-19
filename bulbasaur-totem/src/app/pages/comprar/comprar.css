@@ -1,0 +1,90 @@
+/* Grid responsivo de autos */
+.autos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Card */
+.auto-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  background-color: #fff;
+}
+
+/* Imagen uniforme */
+.image-wrapper, .auto-image {
+  width: 100%;
+  height: 250px; /* altura uniforme para todas */
+  overflow: hidden;
+}
+
+.image-wrapper img, .auto-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Detalles del auto */
+.auto-details, .mat-card-content {
+  padding: 15px;
+}
+
+/* Info de características */
+.car-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 16px;
+  margin-top: 10px;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+}
+
+.icon-red {
+  color: #ee2532;
+}
+
+/* Título del auto */
+.card__title {
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+/* Card actions - botón alineado a la derecha */
+.card-actions {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+}
+
+/* Botón Comprar rojo */
+.btn-comprar {
+  background-color: #ee2532 !important;
+  color: #fff !important;
+  border-radius: 6px;
+}
+
+.btn-comprar:hover {
+  background-color: #c91e29 !important;
+}
+
+/* Mensaje de error */
+.error-message {
+  color: red;
+  padding: 20px;
+  text-align: center;
+}
